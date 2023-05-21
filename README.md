@@ -13,7 +13,7 @@ table.create ✅
 table.clear ✅  
 table.clone ✅  
 table.concat ✅  
-table.unpack 🕒  
+table.unpack ✅  
 table.maxn 🕒  
 table.getn 🕒  
 table.move 🕒  
@@ -183,7 +183,7 @@ local table_ = require(rs.TableFuncs)
 local info = {156, 1, 2, 3, 4, 5}
 local infoString = ""
 
-infoString = tableMod.concat(info, ", ")
+infoString = tableMod.concat(info, ", ", 2, 3)
 print(infoString)
 ```
 ## table.clone
@@ -210,4 +210,16 @@ infodict2 = tableMod.clone(infodict)
 for key, value in pairs(infodict2) do
 	print('Dictionary; ["'..key..'"] = '..value)
 end
+```
+## table.unpack
+Similar to table.concat except the seperator is always " ".  
+`module.unpack(table, number?, number?)`
+```lua
+local rs = game:GetService("ReplicatedStorage")
+local table_ = require(rs.TableFuncs)
+local info = {156, 1, 2, 3, 3, 2, 1}
+local infoString = ""
+
+infoString = tableMod.unpack(info, 3, 5)
+print(infoString)
 ```
