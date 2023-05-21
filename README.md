@@ -10,7 +10,7 @@ table.removev ✅ [CUSTOM]
 table.insert ✅  
 table.insertk ✅ [CUSTOM]  
 table.create ✅  
-table.clear 🕒  
+table.clear ✅  
 table.clone 🕒  
 table.concat 🕒  
 table.unpack 🕒  
@@ -152,5 +152,25 @@ end
 local array2 = tableMod.create(3)
 for index, val in ipairs(array2) do
 	print("Index: "..index..", Value: "..val)
+end
+```
+## table.clear
+Removes all items or clears the table given.  
+`module.clear(table)`
+```lua
+local rs = game:GetService("ReplicatedStorage")
+local table_ = require(rs.TableFuncs)
+local info = {
+	["builderman"] = 156,
+	["ROBLOX"] = 1
+}
+
+for _, value in pairs(info) do
+	print(value)
+end
+print("Clearing..")
+info = tableMod.clear(info)
+for _, value in pairs(info) do
+	print(value)
 end
 ```
