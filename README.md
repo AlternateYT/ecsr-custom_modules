@@ -14,7 +14,7 @@ table.clear ✅
 table.clone ✅  
 table.concat ✅  
 table.unpack ✅  
-table.maxn 🕒  
+table.maxn ✅  
 table.getn 🕒  
 table.move 🕒  
 table.pack 🕒
@@ -222,4 +222,14 @@ local infoString = ""
 
 infoString = tableMod.unpack(info, 3, 5)
 print(infoString)
+```
+## table.maxn
+Returns the highest index found in the given array.  
+`module.maxn(table)`
+```lua
+local rs = game:GetService("ReplicatedStorage")
+local table_ = require(rs.TableFuncs)
+local info = {156, 1, 2, 3, 3, 2, 1}
+
+print(tableMod.maxn(info))
 ```
