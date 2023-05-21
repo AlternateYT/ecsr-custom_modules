@@ -207,4 +207,13 @@ tableMod.move = function(array, a, b, t, dst)
 	return nil
 end
 
+tableMod.pack = function(...)
+	local array = {}
+	local params = {...}
+	for _, param in pairs(params) do
+		array[#array+1] = param
+	end
+	return array
+end
+
 return tableMod
