@@ -5,7 +5,7 @@ Insert the code into ReplicatedStorage as a ModuleScript and rename them accordi
 table.find ✅  
 table.findk ✅ [CUSTOM]  
 table.findv ✅ [CUSTOM]  
-table.remove 🕒  
+table.remove ✅  
 table.insert 🕒  
 table.create 🕒  
 table.clear 🕒  
@@ -33,7 +33,7 @@ else
 end
 ```
 ## table.findv
-Similar to table.find, but is operable outside of arrays and also returns the value if its found instead.  
+Similar to table.find, but is operable outside of arrays and also returns the value if it's found instead.  
 table.findv(table, any)
 ```lua
 local rs = game:GetService("ReplicatedStorage")
@@ -66,5 +66,18 @@ if finding then
 	print(finding.." - FOUND!")
 else
 	print("nil - NOT FOUND!")
+end
+```
+## table.remove
+Removes an item from the array which is associated with the given index.  
+table.remove(table, any)
+```lua
+local rs = game:GetService("ReplicatedStorage")
+local table_ = require(rs.TableFuncs)
+local info = {156, 1}
+
+tableMod.remove(info, 2)
+for _, val in pairs(info) do
+	print(val)
 end
 ```
