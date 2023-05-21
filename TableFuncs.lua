@@ -98,4 +98,12 @@ tableMod.create = function(count, item)
 	return nil
 end
 
+tableMod.clear = function(array)
+	if array and type(array) == "table" then
+		array = {}
+		return array
+	end
+	return nil
+end
+
 return tableMod
