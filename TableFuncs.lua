@@ -179,4 +179,15 @@ tableMod.maxn = function(array)
 	return nil
 end
 
+tableMod.getn = function(array)
+	if array and type(array) == "table" then
+		local count = 0
+		for _, _ in pairs(array) do
+			count = count + 1
+		end
+		return count
+	end
+	return nil
+end
+
 return tableMod
