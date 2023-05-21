@@ -68,4 +68,16 @@ tableMod.removev = function(array, value, maxr)
 	return nil
 end
 
+tableMod.insert = function(array, item, pos)
+	if item and array and type(array) == "table" then
+		if not pos or pos and type(pos) ~= "number" then
+			array[#array+1] = item
+		elseif pos and type(pos) == "number" then
+			array[pos] = item
+		end
+		return array
+	end
+	return nil
+end
+
 return tableMod
