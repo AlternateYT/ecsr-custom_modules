@@ -80,4 +80,11 @@ tableMod.insert = function(array, item, pos)
 	return nil
 end
 
+tableMod.insertk = function(array, item, key)
+	if item and key and array and type(array) == "table" then
+		array[key] = item
+	end
+	return nil
+end
+
 return tableMod
