@@ -16,7 +16,7 @@ table.concat ✅
 table.unpack ✅  
 table.maxn ✅  
 table.getn ✅  
-table.move 🕒  
+table.move ✅  
 table.pack 🕒
 
 # DOCUMENTATION
@@ -242,4 +242,18 @@ local table_ = require(rs.TableFuncs)
 local info = {156, 1, 2, 3, 3, 2, 1, 7, 2, 8, 1}
 
 print(tableMod.getn(info))
+```
+## table.move
+Moves the given array optionally from a specified starting position to ending position pasted at a specified array's specified position.  
+`module.move(table, number?, number?, number?, table?)`
+```lua
+local rs = game:GetService("ReplicatedStorage")
+local table_ = require(rs.TableFuncs)
+local info = {156, 1, 2, 3, 3, 2, 1, 7, 2, 8, 1}
+local info2 = {}
+
+tableMod.move(info, 2, 4, 5, info2)
+for index, value in pairs(info2) do
+	print("Index: "..index..", Value: "..value)
+end
 ```
