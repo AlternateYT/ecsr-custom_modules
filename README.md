@@ -1,4 +1,4 @@
-Insert the raw code into ReplicatedStorage as a ModuleScript and rename them according to their file name on GitHub.
+Insert raw code into ReplicatedStorage as a ModuleScript and rename them according to their file name on GitHub.
 
 # FUNCTIONALITIES
 ## table
