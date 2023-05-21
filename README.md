@@ -144,12 +144,12 @@ Creates an array with as many of the given value that is specified. If no value 
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
 
-local array = tableMod.create(3, "builderman")
+local array = table_.create(3, "builderman")
 for index, val in ipairs(array) do
 	print("Index: "..index..", Value: "..val)
 end
 
-local array2 = tableMod.create(3)
+local array2 = table_.create(3)
 for index, val in ipairs(array2) do
 	print("Index: "..index..", Value: "..val)
 end
@@ -169,7 +169,7 @@ for _, value in pairs(info) do
 	print(value)
 end
 print("Clearing..")
-info = tableMod.clear(info)
+info = table_.clear(info)
 for _, value in pairs(info) do
 	print(value)
 end
@@ -183,7 +183,7 @@ local table_ = require(rs.TableFuncs)
 local info = {156, 1, 2, 3, 4, 5}
 local infoString = ""
 
-infoString = tableMod.concat(info, ", ", 2, 3)
+infoString = table_.concat(info, ", ", 2, 3)
 print(infoString)
 ```
 ## table.clone
@@ -201,12 +201,12 @@ local infodict = {
 local infodict2 = {}
 local infoString = ""
 
-infoarray2 = tableMod.clone(infoarray)
+infoarray2 = table_.clone(infoarray)
 for _, value in pairs(infoarray2) do
 	print("Array; "..value)
 end
 
-infodict2 = tableMod.clone(infodict)
+infodict2 = table_.clone(infodict)
 for key, value in pairs(infodict2) do
 	print('Dictionary; ["'..key..'"] = '..value)
 end
@@ -220,7 +220,7 @@ local table_ = require(rs.TableFuncs)
 local info = {156, 1, 2, 3, 3, 2, 1}
 local infoString = ""
 
-infoString = tableMod.unpack(info, 3, 5)
+infoString = table_.unpack(info, 3, 5)
 print(infoString)
 ```
 ## table.maxn
@@ -231,7 +231,7 @@ local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
 local info = {156, 1, 2, 3, 3, 2, 1}
 
-print(tableMod.maxn(info))
+print(table_.maxn(info))
 ```
 ## table.getn
 Similar to table.maxn, returns however many items are found in the given array.  
@@ -241,7 +241,7 @@ local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
 local info = {156, 1, 2, 3, 3, 2, 1, 7, 2, 8, 1}
 
-print(tableMod.getn(info))
+print(table_.getn(info))
 ```
 ## table.move
 Moves the given array optionally from a specified starting position to ending position pasted at a specified array's specified position.  
@@ -252,7 +252,7 @@ local table_ = require(rs.TableFuncs)
 local info = {156, 1, 2, 3, 3, 2, 1, 7, 2, 8, 1}
 local info2 = {}
 
-tableMod.move(info, 2, 4, 5, info2)
+table_.move(info, 2, 4, 5, info2)
 for index, value in pairs(info2) do
 	print("Index: "..index..", Value: "..value)
 end
@@ -265,7 +265,7 @@ local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
 local info = {}
 
-info = tableMod.pack(1, 2, 3, 4, 5)
+info = table_.pack(1, 2, 3, 4, 5)
 for index, value in pairs(info) do
 	print("Index: "..index..", Value: "..value)
 end
