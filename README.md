@@ -8,6 +8,7 @@ table.findv ✅ [CUSTOM]
 table.remove ✅  
 table.removev ✅ [CUSTOM]  
 table.insert ✅  
+table.insertk ✅ [CUSTOM]  
 table.create 🕒  
 table.clear 🕒  
 table.clone 🕒  
@@ -115,5 +116,24 @@ table_.insert(info, 9999, 7)
 table_.insert(info, 45436)
 for index, val in pairs(info) do
 	print("Index: "..index..", Value: "..val)
+end
+```
+## table.insertk
+Similar to table.insert, but assigns the value to a key instead of a position or index, and the key must be given.  
+`module.insertk(table, Variant, Variant)`
+```lua
+local rs = game:GetService("ReplicatedStorage")
+local table_ = require(rs.TableFuncs)
+local info = {
+	["builderman"] = 156, 
+	["builderman2"] = 156, 
+	["builderman3"] = 156, 
+	["ROBLOX"] = 1, 
+	["ROBLOX2"] = 1
+}
+
+tableMod.insertk(info, 727419, "uhoh")
+for index, val in pairs(info) do
+	print("Key: "..index..", Value: "..val)
 end
 ```
