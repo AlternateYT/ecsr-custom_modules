@@ -7,7 +7,7 @@ table.findk ✅ [CUSTOM]
 table.findv ✅ [CUSTOM]  
 table.remove ✅  
 table.removev ✅ [CUSTOM]  
-table.insert 🕒  
+table.insert ✅  
 table.create 🕒  
 table.clear 🕒  
 table.clone 🕒  
@@ -21,7 +21,7 @@ table.pack 🕒
 # DOCUMENTATION
 ## table.find
 Finds the value given inside an array, returns nil if it couldn't find it, and returns the index if its found  
-`module.find(table, any)`
+`module.find(table, Variant)`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
@@ -36,7 +36,7 @@ end
 ```
 ## table.findv
 Similar to table.find, but is operable outside of arrays and also returns the value if it's found instead.  
-`module.findv(table, any)`
+`module.findv(table, Variant)`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
@@ -54,7 +54,7 @@ end
 ```
 ## table.findk
 Similar to table.find but instead finds the key given inside a dictionary.  
-`module.findk(table, any)`
+`module.findk(table, Variant)`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
@@ -72,7 +72,7 @@ end
 ```
 ## table.remove
 Removes an item from the array which is associated with the given index.  
-`module.remove(table, any)`
+`module.remove(table, Variant)`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
@@ -85,7 +85,7 @@ end
 ```
 ## table.removev
 Similar to table.remove but is operable outside of an array and searches for the given value optionally until the maximum amount of searches set.  
-`module.removev(table, any, number?)`
+`module.removev(table, Variant, number?)`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
@@ -101,5 +101,19 @@ tableMod.removev(info, 156, 2)
 tableMod.removev(info, 1)
 for key, _ in pairs(info) do
 	print(key)
+end
+```
+## table.insert
+Adds the given value to a table at it's given position or index.  
+`module.insert(table, Variant, number?`
+```lua
+local rs = game:GetService("ReplicatedStorage")
+local table_ = require(rs.TableFuncs)
+local info = {156, 156, 156, 1, 1}
+
+tableMod.insert(info, 9999, 7)
+tableMod.insert(info, 45436)
+for index, val in pairs(info) do
+	print("Index: "..index..", Value: "..val)
 end
 ```
