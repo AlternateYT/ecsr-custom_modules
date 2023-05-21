@@ -32,7 +32,7 @@ else
 end
 ```
 ## table.findv
-Similar to table.find, but is operable outside of arrays and also returns the value if its found instead.
+Similar to table.find, but is operable outside of arrays and also returns the value if its found instead.  
 table.findv(table, any)
 ```lua
 local rs = game:GetService("ReplicatedStorage")
