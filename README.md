@@ -174,3 +174,14 @@ for _, value in pairs(info) do
 	print(value)
 end
 ```
+## table.concat
+Transforms the array given into a string, optionally along with a seperator and starting and ending position.
+```lua
+local rs = game:GetService("ReplicatedStorage")
+local table_ = require(rs.TableFuncs)
+local info = {156, 1, 2, 3, 4, 5}
+local infoString = ""
+
+infoString = tableMod.concat(info, ", ")
+print(infoString)
+```
