@@ -15,7 +15,7 @@ table.maxn 🕒
 table.move 🕒  
 table.pack 🕒
 
-# TESTS
+# TESTS [TABLE]
 ## table.find
 Finds the value given inside an array, returns nil if it couldn't find it, and returns the value if its found  
 table.find(table, any)
