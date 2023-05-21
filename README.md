@@ -85,7 +85,7 @@ end
 ```
 ## table.removev
 Similar to table.remove but is operable outside of an array and searches for the given value optionally until the maximum amount of searches set.  
-`module.remove(table, any, number)`
+`module.removev(table, any, number?)`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
