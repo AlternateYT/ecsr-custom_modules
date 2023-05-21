@@ -15,7 +15,7 @@ table.clone ✅
 table.concat ✅  
 table.unpack ✅  
 table.maxn ✅  
-table.getn 🕒  
+table.getn ✅  
 table.move 🕒  
 table.pack 🕒
 
@@ -232,4 +232,14 @@ local table_ = require(rs.TableFuncs)
 local info = {156, 1, 2, 3, 3, 2, 1}
 
 print(tableMod.maxn(info))
+```
+## table.getn
+Similar to table.maxn, returns however many items are found in the given array.  
+`module.getn(table)`
+```lua
+local rs = game:GetService("ReplicatedStorage")
+local table_ = require(rs.TableFuncs)
+local info = {156, 1, 2, 3, 3, 2, 1, 7, 2, 8, 1}
+
+print(tableMod.getn(info))
 ```
