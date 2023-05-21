@@ -164,4 +164,19 @@ tableMod.unpack = function(array, i, j)
 	return nil
 end
 
+tableMod.maxn = function(array)
+	if array and type(array) == "table" then
+		local highestN = 0
+		for index, _ in ipairs(array) do
+			if index and type(index) == "number" then
+				if index > highestN then
+					highestN = index
+				end
+			end
+		end
+		return highestN
+	end
+	return nil
+end
+
 return tableMod
