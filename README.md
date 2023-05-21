@@ -37,12 +37,12 @@ table.findv(table, any)
 ```lua
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
-local array = {
+local info = {
 	["builderman"] = 156,
 	["ROBLOX"] = 1
 }
 
-local finding = table_.findv(array, 1)
+local finding = table_.findv(info, 1)
 if finding then
 	print(finding.." - FOUND!")
 else
