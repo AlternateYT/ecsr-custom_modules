@@ -2,9 +2,9 @@ local tableMod = {}
 
 tableMod.find = function(array, value)
 	if value and array and type(array) == "table" then
-		for _, needle in pairs(array) do
+		for index, needle in ipairs(array) do
 			if needle and needle == value then
-				return needle
+				return index
 			end
 		end
 	end
