@@ -6,6 +6,7 @@ table.find ✅
 table.findk ✅ [CUSTOM]  
 table.findv ✅ [CUSTOM]  
 table.remove ✅  
+table.removev ✅ [CUSTOM]  
 table.insert 🕒  
 table.create 🕒  
 table.clear 🕒  
@@ -79,5 +80,25 @@ local info = {156, 1}
 tableMod.remove(info, 2)
 for _, val in pairs(info) do
 	print(val)
+end
+```
+## table.removev
+Similar to table.remove but is operable outside of an array and searches for the given value optionally until the maximum amount of searches set.  
+module.remove(table, any, number)
+```lua
+local rs = game:GetService("ReplicatedStorage")
+local table_ = require(rs.TableFuncs)
+local info = {
+	["builderman"] = 156, 
+	["builderman2"] = 156, 
+	["builderman3"] = 156, 
+	["ROBLOX"] = 1, 
+	["ROBLOX2"] = 1
+}
+
+tableMod.removev(info, 156, 2)
+tableMod.removev(info, 1)
+for key, _ in pairs(info) do
+	print(key)
 end
 ```
