@@ -146,4 +146,22 @@ tableMod.concat = function(array, sep, i, j)
 	return nil
 end
 
+tableMod.unpack = function(array, i, j)
+	if array and type(array) == "table" then
+		local arrayString = ""
+		if not i or i and type(i) ~= "number" then i = 1 end
+		if not j or j and type(j) ~= "number" then j = #array end
+		for index, value in ipairs(array) do
+			if index >= i and index <= j then
+				value = tostring(value)
+				if value and type(value) == "string" then
+					arrayString = arrayString..(value.." ")
+				end
+			end
+		end
+		return arrayString
+	end
+	return nil
+end
+
 return tableMod
