@@ -20,7 +20,7 @@ table.pack 🕒
 # DOCUMENTATION
 ## table.find
 Finds the value given inside an array, returns nil if it couldn't find it, and returns the index if its found  
-module.find(table, any)
+`module.find(table, any)`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
@@ -35,7 +35,7 @@ end
 ```
 ## table.findv
 Similar to table.find, but is operable outside of arrays and also returns the value if it's found instead.  
-module.findv(table, any)
+`module.findv(table, any)`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
@@ -53,7 +53,7 @@ end
 ```
 ## table.findk
 Similar to table.find but instead finds the key given inside a dictionary.  
-module.findk(table, any)
+`module.findk(table, any)`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
@@ -71,7 +71,7 @@ end
 ```
 ## table.remove
 Removes an item from the array which is associated with the given index.  
-module.remove(table, any)
+`module.remove(table, any)`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
@@ -84,7 +84,7 @@ end
 ```
 ## table.removev
 Similar to table.remove but is operable outside of an array and searches for the given value optionally until the maximum amount of searches set.  
-module.remove(table, any, number)
+`module.remove(table, any, number)`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
