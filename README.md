@@ -132,7 +132,7 @@ local info = {
 	["ROBLOX2"] = 1
 }
 
-tableMod.insertk(info, 727419, "uhoh")
+table_.insertk(info, 727419, "uhoh")
 for index, val in pairs(info) do
 	print("Key: "..index..", Value: "..val)
 end
