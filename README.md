@@ -105,7 +105,7 @@ for key, _ in pairs(info) do
 end
 ```
 ## table.insert
-Adds the given value to a table at it's given position or index. If no position is given, it'll append the given value instead. 
+Adds the given value to a table at it's given position or index. If no position is given, it'll append the given value instead.  
 `module.insert(table, Variant, number?`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
