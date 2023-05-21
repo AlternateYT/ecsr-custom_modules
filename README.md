@@ -17,17 +17,32 @@ table.pack 🕒
 
 # TESTS [TABLE]
 ## table.find
-Finds the value given inside an array, returns nil if it couldn't find it, and returns the value if its found  
+Finds the value given inside an array, returns nil if it couldn't find it, and returns the index if its found  
 table.find(table, any)
 ```lua
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
-local info = {
+local info = {156, 1}
+
+local finding = table_.find(info, 156)
+if finding then
+	print(finding.." - FOUND!")
+else
+	print("nil - NOT FOUND!")
+end
+```
+##table.findv
+Similar to table.find, but is operable outside of arrays and also returns the value if its found instead.
+table.findv(table, any)
+```lua
+local rs = game:GetService("ReplicatedStorage")
+local table_ = require(rs.TableFuncs)
+local array = {
 	["builderman"] = 156,
 	["ROBLOX"] = 1
 }
 
-local finding = table_.find(info, 156)
+local finding = table_.findv(array, 1)
 if finding then
 	print(finding.." - FOUND!")
 else
