@@ -175,7 +175,7 @@ for _, value in pairs(info) do
 end
 ```
 ## table.concat
-Transforms the array given into a string, optionally along with a seperator and starting and ending position.
+Transforms the array given into a string, optionally along with a seperator and starting and ending position.  
 `module.concat(table, string?, number?, number?)`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
