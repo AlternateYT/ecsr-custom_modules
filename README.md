@@ -1,7 +1,14 @@
-Insert raw code into ReplicatedStorage as a ModuleScript and rename them according to their file name on GitHub.  
 You can view the documentation [here](https://sleepdeprived.gitbook.io/ecsr-custom_modules/).
 
-# STATUS
+# Setup
+Insert code via the raw files into ReplicatedStorage as a ModuleScript and rename them according to their file name on GitHub.  
+Heres how you'd use the table module inside of your scripts:
+```lua
+local rs = game:GetService("ReplicatedStorage")
+local table_ = require(rs.TableFuncs)
+```
+
+# Status
 ## table
 table.find ✅  
 table.findk ✅ [CUSTOM]  
