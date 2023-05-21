@@ -9,7 +9,7 @@ table.remove ✅
 table.removev ✅ [CUSTOM]  
 table.insert ✅  
 table.insertk ✅ [CUSTOM]  
-table.create 🕒  
+table.create ✅  
 table.clear 🕒  
 table.clone 🕒  
 table.concat 🕒  
@@ -135,5 +135,22 @@ local info = {
 table_.insertk(info, 727419, "uhoh")
 for index, val in pairs(info) do
 	print("Key: "..index..", Value: "..val)
+end
+```
+## table.create
+Creates a table with as many of the given value that is specified. If no value is specified, the value will default to an empty string; "".  
+`module.create(number, Variant?)`
+```lua
+local rs = game:GetService("ReplicatedStorage")
+local table_ = require(rs.TableFuncs)
+
+local array = tableMod.create(3, "builderman")
+for index, val in ipairs(array) do
+	print("Index: "..index..", Value: "..val)
+end
+
+local array2 = tableMod.create(3)
+for index, val in ipairs(array2) do
+	print("Index: "..index..", Value: "..val)
 end
 ```
