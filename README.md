@@ -36,7 +36,7 @@ end
 ```
 ## table.findk
 Similar to table.find but instead finds the key given.  
-table.find(table, any)
+table.findk(table, any)
 ```lua
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
