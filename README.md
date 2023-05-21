@@ -23,8 +23,8 @@ table.find(table, any)
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
 local info = {
-["builderman"] = 156,
-["ROBLOX"] = 1
+	["builderman"] = 156,
+	["ROBLOX"] = 1
 }
 
 local finding = table_.find(info, 156)
@@ -41,8 +41,8 @@ table.find(table, any)
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
 local info = {
-["builderman"] = 156,
-["ROBLOX"] = 1
+	["builderman"] = 156,
+	["ROBLOX"] = 1
 }
 
 local finding = table_.findk(info, "ROBLOX")
