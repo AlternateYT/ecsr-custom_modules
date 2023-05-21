@@ -78,7 +78,7 @@ local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
 local info = {156, 1}
 
-tableMod.remove(info, 2)
+table_.remove(info, 2)
 for _, val in pairs(info) do
 	print(val)
 end
@@ -97,8 +97,8 @@ local info = {
 	["ROBLOX2"] = 1
 }
 
-tableMod.removev(info, 156, 2)
-tableMod.removev(info, 1)
+table_.removev(info, 156, 2)
+table_.removev(info, 1)
 for key, _ in pairs(info) do
 	print(key)
 end
@@ -111,8 +111,8 @@ local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
 local info = {156, 156, 156, 1, 1}
 
-tableMod.insert(info, 9999, 7)
-tableMod.insert(info, 45436)
+table_.insert(info, 9999, 7)
+table_.insert(info, 45436)
 for index, val in pairs(info) do
 	print("Index: "..index..", Value: "..val)
 end
