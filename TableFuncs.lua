@@ -87,4 +87,15 @@ tableMod.insertk = function(array, item, key)
 	return nil
 end
 
+tableMod.create = function(count, item)
+	if count and type(count) == "number" then
+		local array = {}
+		for i = 1, count do
+			array[#array+1] = item or ""
+		end
+		return array
+	end
+	return nil
+end
+
 return tableMod
