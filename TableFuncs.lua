@@ -190,4 +190,21 @@ tableMod.getn = function(array)
 	return nil
 end
 
+tableMod.move = function(array, a, b, t, dst)
+	if array and type(array) == "table" then
+		if not a or a and type(a) ~= "number" then a = 1 end
+		if not b or b and type(b) ~= "number" then b = #array end
+		if not t or t and type(t) ~= "number" then t = 1 end
+		if not dst or dst and type(dst) ~= "table" then dst = {} end
+		for index, value in ipairs(array) do
+			if index >= a and index <= b then
+				dst[t] = value
+				t = t + 1
+			end
+		end
+		return dst
+	end
+	return nil
+end
+
 return tableMod
