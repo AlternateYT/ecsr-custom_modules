@@ -187,7 +187,7 @@ infoString = tableMod.concat(info, ", ", 2, 3)
 print(infoString)
 ```
 ## table.clone
-Returns a duplicate of the table given.
+Returns a duplicate of the table given.  
 `module.clone(table)`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
