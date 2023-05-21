@@ -31,7 +31,7 @@ else
 	print("nil - NOT FOUND!")
 end
 ```
-##table.findv
+## table.findv
 Similar to table.find, but is operable outside of arrays and also returns the value if its found instead.
 table.findv(table, any)
 ```lua
