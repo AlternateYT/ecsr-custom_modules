@@ -106,6 +106,23 @@ tableMod.clear = function(array)
 	return nil
 end
 
+tableMod.clone = function(array)
+	if array and type(array) == "table" then
+		local newArray = {}
+		local count = 0
+		for key, value in pairs(array) do
+			count = count + 1
+			if key then
+				newArray[key] = value
+			else
+				newArray[count] = value
+			end
+		end
+		return newArray
+	end
+	return nil
+end
+
 tableMod.concat = function(array, sep, i, j)
 	if array and type(array) == "table" then
 		local arrayString = ""
