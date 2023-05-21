@@ -35,7 +35,7 @@ else
 end
 ```
 ## table.findk
-Similar to table.find but instead finds the key given.  
+Similar to table.find but instead finds the key given inside a dictionary.  
 table.findk(table, any)
 ```lua
 local rs = game:GetService("ReplicatedStorage")
