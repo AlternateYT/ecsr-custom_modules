@@ -4,6 +4,7 @@ Insert the code into ReplicatedStorage as a ModuleScript and rename them accordi
 ## table
 table.find ✅  
 table.findk ✅ [CUSTOM]  
+table.findv ✅ [CUSTOM]  
 table.remove 🕒  
 table.insert 🕒  
 table.create 🕒  
