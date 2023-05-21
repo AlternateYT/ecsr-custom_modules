@@ -45,4 +45,27 @@ tableMod.remove = function(array, index)
 	return nil
 end
 
+tableMod.removev = function(array, value, maxr)
+	local removalCount = 0
+	if value and array and type(array) == "table" then
+		for key, needle in pairs(array) do
+			if maxr then
+				if needle == value and removalCount < maxr then
+					removalCount = removalCount + 1
+					array[key] = nil
+				end
+				if removalCount >= maxr then
+					break
+				end
+			else
+				if needle == value then
+					array[key] = nil
+				end
+			end
+		end
+		return array
+	end
+	return nil
+end
+
 return tableMod
