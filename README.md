@@ -14,6 +14,7 @@ table.clone 🕒
 table.concat 🕒  
 table.unpack 🕒  
 table.maxn 🕒  
+table.getn 🕒  
 table.move 🕒  
 table.pack 🕒
 
