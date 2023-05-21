@@ -138,7 +138,7 @@ for index, val in pairs(info) do
 end
 ```
 ## table.create
-Creates a table with as many of the given value that is specified. If no value is specified, the value will default to an empty string; "".  
+Creates an array with as many of the given value that is specified. If no value is specified, the value will default to an empty string; "".  
 `module.create(number, Variant?)`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
