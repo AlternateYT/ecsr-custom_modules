@@ -17,7 +17,7 @@ table.unpack ✅
 table.maxn ✅  
 table.getn ✅  
 table.move ✅  
-table.pack 🕒
+table.pack ✅
 
 # DOCUMENTATION
 ## table.find
@@ -254,6 +254,19 @@ local info2 = {}
 
 tableMod.move(info, 2, 4, 5, info2)
 for index, value in pairs(info2) do
+	print("Index: "..index..", Value: "..value)
+end
+```
+## table.pack
+Inserts any given parameters into a new table and returns it.  
+`module.pack(...)`
+```lua
+local rs = game:GetService("ReplicatedStorage")
+local table_ = require(rs.TableFuncs)
+local info = {}
+
+info = tableMod.pack(1, 2, 3, 4, 5)
+for index, value in pairs(info) do
 	print("Index: "..index..", Value: "..value)
 end
 ```
