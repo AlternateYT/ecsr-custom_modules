@@ -11,7 +11,7 @@ table.insert ✅
 table.insertk ✅ [CUSTOM]  
 table.create ✅  
 table.clear ✅  
-table.clone 🕒  
+table.clone ✅  
 table.concat ✅  
 table.unpack 🕒  
 table.maxn 🕒  
@@ -176,6 +176,7 @@ end
 ```
 ## table.concat
 Transforms the array given into a string, optionally along with a seperator and starting and ending position.
+`module.concat(table, string?, number?, number?)`
 ```lua
 local rs = game:GetService("ReplicatedStorage")
 local table_ = require(rs.TableFuncs)
@@ -184,4 +185,29 @@ local infoString = ""
 
 infoString = tableMod.concat(info, ", ")
 print(infoString)
+```
+## table.clone
+Returns a duplicate of the table given.
+`module.clone(table)`
+```lua
+local rs = game:GetService("ReplicatedStorage")
+local table_ = require(rs.TableFuncs)
+local infoarray = {156, 1}
+local infoarray2 = {}
+local infodict = {
+	["builderman"] = 156,
+	["ROBLOX"] = 1
+}
+local infodict2 = {}
+local infoString = ""
+
+infoarray2 = tableMod.clone(infoarray)
+for _, value in pairs(infoarray2) do
+	print("Array; "..value)
+end
+
+infodict2 = tableMod.clone(infodict)
+for key, value in pairs(infodict2) do
+	print('Dictionary; ["'..key..'"] = '..value)
+end
 ```
