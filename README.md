@@ -25,6 +25,5 @@ table.unpack ✅
 table.maxn ✅  
 table.getn ✅  
 table.move ✅  
-table.pack ✅
-
+table.pack ✅  
 table.sort ❌
